@@ -10,7 +10,7 @@ Out of the box, this modification will display a block with the text "No Preview
 # Video Guide
 Watch how I modify Divi 3.0.18 in less then 2 minutes!
 
-
+https://youtu.be/rvhHuqKMCHQ
 
 # Step 1
 You need to open the file **Divi/includes/builder/frontend-builder/bundle.js** in a text editor. You will change this file.
