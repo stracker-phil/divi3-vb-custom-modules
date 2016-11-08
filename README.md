@@ -1,4 +1,4 @@
-[[https://github.com/stracker-phil/divi3-vb-custom-modules/raw/master/custom-module-in-frontend-editor.png]]
+![Example](https://github.com/stracker-phil/divi3-vb-custom-modules/raw/master/custom-module-in-frontend-editor.png)
 
 # Info
 
