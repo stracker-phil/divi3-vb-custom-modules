@@ -42,3 +42,9 @@ Paste the contents of **snippet2.js** at the end of the file, right before the f
 Save and you're done! :)
 
 Reload your website and test Divi. It will show your custom modules.
+
+# Demo module
+The file **demo-module.php** is a simple WordPress plugin that adds 2 Divi modules (both with title "Testimonial") that illustrate the change for you.
+
+- The first module has the modification that I mentioned in the Introduction to make the preview work in visual builder.
+- The second module does not have this modification and you will see how a normal module will look like. Note that it still works, but only the preview in visual builder is missing. This is how all the custom modules from Divi 2.x will look like, until the author updates them.
