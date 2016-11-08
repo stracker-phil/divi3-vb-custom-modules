@@ -1,3 +1,5 @@
+[[https://github.com/stracker-phil/divi3-vb-custom-modules/raw/master/custom-module-in-frontend-editor.png]]
+
 # Info
 
 This info shows you, how to modify your Divi3 theme to enable custom built modules in the visual builder (= in front-end editing)
