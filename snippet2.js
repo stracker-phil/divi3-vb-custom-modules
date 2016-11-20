@@ -50,7 +50,7 @@
       , l = n(1)
       , wrap = o(l)
       , c = o(n(2))
-      , p = n(40)
+      , p = n(41) // <<<---- in 3.0.18 this line is n(40)
       , h = o(n(6))
       , m = o(n(3))
       , BuilderModule = o(n(10))
