@@ -1,7 +1,9 @@
 /**
-This block possibly needs slight changes for new versions of Divi, because internal references changes with each update.
+This block possibly needs slight changes for new versions of Divi,
+because internal references changes with each update.
 
-The below module is based on the Divi "Code" module. So you have to locate that module in the bundle.js code 
+The below module is based on the Divi "Code" module.
+So you have to locate that module in the bundle.js code 
 and compare it to the code below.
 
 Here are some tipps to do this:
