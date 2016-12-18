@@ -20,7 +20,6 @@ Here are some tipps to do this:
 */
 
 // ---- START OF MODIFICATION ---- ##CHANGE2
-// See note in line 55 below
 ,  function(e, t, n) {
     "use strict";
     function o(e) {
