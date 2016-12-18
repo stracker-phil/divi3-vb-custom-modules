@@ -1,6 +1,27 @@
+/**
+This block possibly needs slight changes for new versions of Divi, because internal references changes with each update.
+
+The below module is based on the Divi "Code" module. So you have to locate that module in the bundle.js code 
+and compare it to the code below.
+
+Here are some tipps to do this:
+1. Go to the place where you added snippet1.js and identify the ID of the code block
+   It might be `code: b.default` (next: find `b`)
+   Scroll up until you find a line like `b = o(g)`, and directly above `g = n(376)`
+   This means you have to locate module 376!
+2. Now the annoying part: Find that module. You have to check each module ID via trial-and-error to identify the module.
+   To see the ID of a module simply insert following JS right before a "use strict" line:
+   console.log( 'module ID (is it 376?)', e.id);
+   (modules are in order, so e.g. when you found module 370 you have to scroll down a bit further)
+   Hint: The module should be in the lower half of the file, around line 35.000
+3. Now compare the code of the both modules. The top two thirds should be equal.
+   Pay attention to the letters and numbers in the block `l = n(1), u = o(2), ...`
+   (or simply copy-paste that block from Divi to your custom modification below)
+*/
+
 // ---- START OF MODIFICATION ---- ##CHANGE2
-// See note in line 55
-, function(e, t, n) {
+// See note in line 55 below
+,  function(e, t, n) {
     "use strict";
     function o(e) {
         return e && e.__esModule ? e : {
@@ -49,20 +70,20 @@
         }
     }()
       , l = n(1)
-      , wrap = o(l)
-      , c = o(n(2))
-/*
-Following value depends on your version of Divi: 
-- 3.0.18 ... 40
-- 3.0.19 ... 41
-- 3.0.21 ... 40
-*/
-      , p = n(40) // <<<---- adjust value accoriding to list above.
-      , h = o(n(6))
-      , m = o(n(3))
-      , BuilderModule = o(n(10))
-      , y = o(n(29))
-      , E = o(n(8))
+      , u = o(l)
+      , d = n(2)
+      , c = o(d)
+      , p = n(40)
+      , f = n(7)
+      , _ = o(f)
+      , h = n(3)
+      , m = o(h)
+      , g = n(10)
+      , b = o(g)
+      , v = n(29)
+      , y = o(v)
+      , C = n(8)
+      , E = o(C)
       , w = n(9)
       , M = new p.AllHtmlEntities
       , T = function(e) {
@@ -90,18 +111,20 @@ Following value depends on your version of Divi:
             key: "render",
             value: function() {
                 var e = this.props.attrs
-                  , custom_css = [];
+                  , t = [];
                 if (m.default.hasValue(e.max_width_tablet) || m.default.hasValue(e.max_width_phone) || m.default.hasValue(e.max_width)) {
                     var n = {
                         desktop: e.max_width,
                         tablet: e.max_width_tablet,
                         phone: e.max_width_phone
                     };
-                    custom_css.push(m.default.generateResponsiveCss(n, "%order_class%", "max-width"))
+                    t.push(m.default.generateResponsiveCss(n, "%%order_class%%", "max-width"))
                 }
-                var o = M.decode(this.props.content)
-                  , a = (0, h.default)({
-                    additional_css: custom_css,
+                var o = M.decode(this.props.content);
+                o = o.split("<!-- [et_pb_line_break_holder] -->").join("\n");
+                var a = (0,
+                _.default)({
+                    additional_css: t,
                     moduleClassName: this.moduleClassNameArray()
                 }, this.props);
 
@@ -114,8 +137,8 @@ Following value depends on your version of Divi:
                     previewText = '<div style="text-align:center;border:2px solid rgba(0,0,0,0.5);background:rgba(0,0,0,0.05);padding:10px">No Preview Available</div>';
                 }
 
-                return wrap.default.createElement(
-                    BuilderModule.default, a, wrap.default.createElement(
+                return u.default.createElement(
+                    b.default, a, u.default.createElement(
                         'div', {
                             dangerouslySetInnerHTML: {
                                 __html: previewText
