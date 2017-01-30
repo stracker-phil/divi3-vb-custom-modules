@@ -9,11 +9,13 @@ and compare it to the code below.
 Here are some tipps to do this:
 1. Go to the place where you added snippet1.js and identify the ID of the code block
    It might be `code: b.default` (next: find `b`)
-   Scroll up until you find a line like `b = o(g)`, and directly above `g = n(376)`
-   This means you have to locate module 376!
+   Scroll up until you find a line like `b = o(g)`, and directly above `g = n(378)`
+   This means you have to locate module 378!
 2. Now the annoying part: Find that module. You have to check each module ID via trial-and-error to identify the module.
    To see the ID of a module simply insert following JS right before a "use strict" line:
-   console.log( 'module ID (is it 376?)', e.id);
+   
+   console.log( 'module ID (is it 378?)', e.id);
+   
    (modules are in order, so e.g. when you found module 370 you have to scroll down a bit further)
    Hint: The module should be in the lower half of the file, around line 35.000
 3. Now compare the code of the both modules. The top two thirds should be equal.
@@ -81,7 +83,7 @@ Here are some tipps to do this:
       , m = o(h)
       , g = n(10)
       , b = o(g)
-      , v = n(29)
+      , v = n(30)
       , y = o(v)
       , C = n(8)
       , E = o(C)
