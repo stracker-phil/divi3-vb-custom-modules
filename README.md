@@ -28,7 +28,7 @@ Past this code right BEFORE the `return` near line 16
     alert('Next ID:' + arguments[0].length)
 
 And refresh your website once again to see the javascript alert result.
-In Divi 3.0.18 the result is '739'
+In Divi 3.0.32 the result is '747'
 
 # Step 4
 Modify the code in **snippet1.js** (you need to insert the module ID you found in one place)
