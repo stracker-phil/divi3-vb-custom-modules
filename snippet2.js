@@ -9,15 +9,15 @@ and compare it to the code below.
 Here are some tipps to do this:
 1. Go to the place where you added snippet1.js and identify the ID of the code block
    It might be `code: b.default` (next: find `b`)
-   Scroll up until you find a line like `b = o(g)`, and directly above `g = n(378)`
+   Scroll up until you find a line like `b = o(g)`, and directly above `g = n(380)`
    This means you have to locate module 378!
 2. Now the annoying part: Find that module. You have to check each module ID via trial-and-error to identify the module.
    To see the ID of a module simply insert following JS right before a "use strict" line:
    
-   console.log( 'module ID (is it 378?)', e.id);
+   console.log( 'module ID (is it 380?)', e.id);
    
    (modules are in order, so e.g. when you found module 370 you have to scroll down a bit further)
-   Hint: The module should be in the lower half of the file, around line 35.000
+   Hint: The module should be in the lower half of the file, around line 35.600
 3. Now compare the code of the both modules. The top two thirds should be equal.
    Pay attention to the letters and numbers in the block `l = n(1), u = o(2), ...`
    (or simply copy-paste that block from Divi to your custom modification below)
@@ -76,7 +76,7 @@ Here are some tipps to do this:
       , u = o(l)
       , d = n(2)
       , c = o(d)
-      , p = n(41)
+      , p = n(42)
       , f = n(7)
       , _ = o(f)
       , h = n(3)
