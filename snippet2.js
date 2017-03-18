@@ -9,15 +9,15 @@ and compare it to the code below.
 Here are some tipps to do this:
 1. Go to the place where you added snippet1.js and identify the ID of the code block
    It might be `code: b.default` (next: find `b`)
-   Scroll up until you find a line like `b = o(g)`, and directly above `g = n(389)`
-   This means you have to locate module 389!
+   Scroll up until you find a line like `b = o(g)`, and directly above `g = n(391)`
+   This means you have to locate module 391!
 2. Now the annoying part: Find that module. You have to check each module ID via trial-and-error to identify the module.
    To see the ID of a module simply insert following JS right before a "use strict" line:
    
-   console.log( 'module ID (is it 389?)', e.id);
+   console.log( 'module ID', e.id);
    
    (modules are in order, so e.g. when you found the module you have to scroll down a bit further)
-   Hint: The module should be in the lower half of the file, around line 35.600
+   Hint: The module should be in the lower half of the file, around line 36.300
 3. Now compare the code of the both modules. The top two thirds should be equal.
    Pay attention to the letters and numbers in the block `l = n(1), u = o(2), ...`
    (or simply copy-paste that block from Divi to your custom modification below)
@@ -88,6 +88,72 @@ Here are some tipps to do this:
       , C = n(8)
       , E = o(C)
       , w = n(9)
+,  function(e, t, n) {
+    "use strict";
+    function o(e) {
+        return e && e.__esModule ? e : {
+            default: e
+        }
+    }
+    function a(e, t) {
+        if (!(e instanceof t))
+            throw new TypeError("Cannot call a class as a function")
+    }
+    function r(e, t) {
+        if (!e)
+            throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+        return !t || "object" != typeof t && "function" != typeof t ? e : t
+    }
+    function i(e, t) {
+        if ("function" != typeof t && null !== t)
+            throw new TypeError("Super expression must either be null or a function, not " + typeof t);
+        e.prototype = Object.create(t && t.prototype, {
+            constructor: {
+                value: e,
+                enumerable: !1,
+                writable: !0,
+                configurable: !0
+            }
+        }),
+        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
+    }
+    Object.defineProperty(t, "__esModule", {
+        value: !0
+    });
+    var s = function() {
+        function e(e, t) {
+            for (var n = 0; n < t.length; n++) {
+                var o = t[n];
+                o.enumerable = o.enumerable || !1,
+                o.configurable = !0,
+                "value"in o && (o.writable = !0),
+                Object.defineProperty(e, o.key, o)
+            }
+        }
+        return function(t, n, o) {
+            return n && e(t.prototype, n),
+            o && e(t, o),
+            t
+        }
+    }()
+      , l = n(1)
+      , u = o(l)
+      , d = n(2)
+      , c = o(d)
+      , p = n(46)
+      , f = n(7)
+      , _ = o(f)
+      , h = n(3)
+      , m = o(h)
+      , g = n(11)
+      , b = o(g)
+      , v = n(31)
+      , y = o(v)
+      , C = n(8)
+      , E = o(C)
+      , w = n(9)
+      , M = new p.AllHtmlEntities
+      , T = function(e) {
 // ---- START OF MODIFICATION ---- ##CHANGE2
 ,  function(e, t, n) {
     "use strict";
